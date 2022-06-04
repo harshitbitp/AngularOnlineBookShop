@@ -1,0 +1,17 @@
+
+<form #f="ngForm" (ngSubmit)="add(f.value)">
+<div class="form-group">
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label"><b>Book Name</b></label>
+        <input  id='i1' ngModel name="name" type="name" class="form-control" id="exampleFormControlInput1" placeholder="Enter Book" #name="ngModel" required>
+    </div>
+</div>
+<input type="submit"  class="btn btn-success" value="Add Book"/>
+<ul class="list-group">
+        <li class="list-group-item"  let *ngFor=" let i of books">
+        {{i.name}}
+            </li>
+</ul>
+
+</form>
+
